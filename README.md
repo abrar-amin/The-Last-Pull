@@ -13,4 +13,5 @@ The Last Pull is a 2D Gacha-inspired game that is a love letter to gacha games. 
 Credits:
 
 Art: Sophia Li 
+
 Programming: Abrar Amin
