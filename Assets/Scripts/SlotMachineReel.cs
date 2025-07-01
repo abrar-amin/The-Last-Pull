@@ -131,7 +131,6 @@ public class SlotMachineReel : MonoBehaviour
             float randomValue = Random.value + reelIndex * 0.37f;
             randomValue = randomValue % 1.0f;
             landingPosition = Mathf.FloorToInt(randomValue * symbolPrefabs.Count);
-            landingPosition = 1;
         }
 
         if (debugMode)

@@ -70,7 +70,6 @@ public class BattleSystem : MonoBehaviour
 
 		yield return new WaitForSeconds(7f);
 		Destroy(titleScreen);
-		state = BattleState.PLAYERTURN;
 		PlayerTurn();
 	}
 
@@ -251,8 +250,6 @@ public class BattleSystem : MonoBehaviour
 
 
 
-		
-
 	}
 
 	void EndBattle()
@@ -270,6 +267,8 @@ public class BattleSystem : MonoBehaviour
 
 	void PlayerTurn()
 	{
+		state = BattleState.PLAYERTURN;
+
 		HandleScript.canSpin = true;
 		dialogueText.text = "PULL THE LEVER!";
 	}
@@ -301,7 +300,6 @@ public class BattleSystem : MonoBehaviour
 		if (state != BattleState.PLAYERTURN)
 			return;
 
-		Debug.Log("Triggered!");
 		StartCoroutine(PlayerAttackReel());
 		
 	}
