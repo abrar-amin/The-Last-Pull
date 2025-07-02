@@ -46,11 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475d8d7ed9646504888a5702b5d7ed33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Ganyou
-  unitLevel: 1
-  damage: 5
-  maxHP: 50
-  currentHP: 50
+  UnitHud: {fileID: 0}
+  unitName: Ganchu
+  unitLevel: 6
+  damage: 20
+  maxHP: 100
+  currentHP: 0
 --- !u!95 &316895915361409640
 Animator:
   serializedVersion: 5
