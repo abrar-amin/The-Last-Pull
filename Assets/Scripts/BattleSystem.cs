@@ -7,6 +7,7 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 
+	// Should not be hard coded 
 	public int[] playerMoveDamage = { 5, 7, 15, 19 };
 
 
@@ -68,7 +69,11 @@ public class BattleSystem : MonoBehaviour
 		playerHUD.SetHUD(playerUnit);
 		enemyHUD.SetHUD(enemyUnit);
 
+		//This is hard coded and should be fixed. 
+		//Maybe something event driven with game state?
 		yield return new WaitForSeconds(7f);
+
+		
 		Destroy(titleScreen);
 		PlayerTurn();
 	}
@@ -76,6 +81,7 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator PlayerAttack()
 	{
 
+		
 		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
 		enemyHUD.SetHP(enemyUnit.currentHP);
